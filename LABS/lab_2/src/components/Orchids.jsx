@@ -108,7 +108,7 @@ function Orchids() {
               </Col>
               <Col md={7}>
                 <h5 className="text-primary border-bottom pb-2">Orchid Information</h5>
-                <ul className="list-unstyled">
+                <ul className=" list-unstyled">
                   <li className="mb-2"><strong>ID:</strong> {selectedOrchid.id}</li>
                   <li className="mb-2"><strong>Category:</strong> {selectedOrchid.category}</li>
                   <li className="mb-2">
