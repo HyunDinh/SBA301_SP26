@@ -1,42 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
-  padding: 2em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none !important;
+  border-radius: 12px !important;
+  overflow: hidden;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.carousel-item img {
+  filter: brightness(0.7);
+}
+
+.carousel-caption {
+  bottom: 25%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.detail-image {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+@media (max-width: 576px) {
+  .carousel-item { height: 250px !important; }
+  .carousel-caption p { display: none; }
+  .carousel-caption h3 { font-size: 1.1rem; }
+}
+
+/* About Page Custom */
+.display-4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e7f1ff;
+  color: #0d6efd;
+}
+
+.w-fit-content {
+  width: fit-content;
 }
