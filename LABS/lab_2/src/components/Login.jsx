@@ -1,16 +1,27 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext'; // Import hook
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  
   const navigate = useNavigate();
+  const { dispatch } = useAuth(); // Lấy hàm dispatch từ context
 
   const handleLogin = (e) => {
     e.preventDefault();
+    
+    // Giả lập kiểm tra tài khoản
     if (username === 'admin' && password === '123456') {
+      // Gửi action lên Reducer thông qua Context
+      dispatch({ 
+        type: 'LOGIN_SUCCESS', 
+        payload: { name: 'Admin User', role: 'admin' } 
+      });
+      
       alert('Login Successful!');
       navigate('/');
     } else {
