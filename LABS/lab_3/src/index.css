@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #0d6efd;
+  --bg-light: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: #212529;
+}
+
+main {
+  min-height: 60vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}

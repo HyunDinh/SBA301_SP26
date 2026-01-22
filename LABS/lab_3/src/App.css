@@ -1,0 +1,49 @@
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.carousel-item img {
+  filter: brightness(0.7);
+}
+
+.carousel-caption {
+  bottom: 25%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.detail-image {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+@media (max-width: 576px) {
+  .carousel-item { height: 250px !important; }
+  .carousel-caption p { display: none; }
+  .carousel-caption h3 { font-size: 1.1rem; }
+}
+
+/* About Page Custom */
+.display-4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e7f1ff;
+  color: #0d6efd;
+}
+
+.w-fit-content {
+  width: fit-content;
+}
